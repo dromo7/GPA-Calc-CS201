@@ -10,12 +10,10 @@ int main() {
     cin >> amount;
 
     for (int i=0; i < amountl ++i) {
-        string course;
         char grade;
         int credits;
-        cout << "Enter course name: " << endl;  
-        cin >> course;
-        cout << "Enter grade received(A-F): " << endl;
+
+        cout << "Enter grade received for Course " << i+1 << "(A-F): " << endl;
         cin >> grade;
         cout << "Enter credits received: " << endl;
         cin >> credits;
@@ -40,7 +38,7 @@ int main() {
 
         totalPoints += credits * points;
         totalCredits += credits;
-        
+
     }
     gpa = totalPoints / totalCredits;
     cout << "Your GPA is: " << gpa << endl;
