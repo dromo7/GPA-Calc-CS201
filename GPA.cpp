@@ -5,11 +5,14 @@ using namespace std;
 int main() {
     int amount;
     double gpa;
+    double points = 0.0;
+    int totalCredits = 0;
+    int totalPoints = 0;
 
     cout << "Enter amount of courses: " << endl;
     cin >> amount;
 
-    for (int i=0; i < amountl ++i) {
+    for (int i=0; i < amount; ++i) {
         char grade;
         int credits;
 
@@ -18,9 +21,7 @@ int main() {
         cout << "Enter credits received: " << endl;
         cin >> credits;
 
-        double points = 0.0;
-        int totalCredits = 0;
-        int totalPoints = 0;
+        
         if (grade == 'A') {
             points = 4.0;
         } else if (grade == 'B') {
