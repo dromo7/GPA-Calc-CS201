@@ -38,7 +38,6 @@ int main() {
 
         totalPoints += credits * points;
         totalCredits += credits;
-
     }
     gpa = totalPoints / totalCredits;
     cout << "Your GPA is: " << gpa << endl;
