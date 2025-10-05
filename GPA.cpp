@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
     int amount;
+    double gpa;
 
     cout << "Enter amount of courses: " << endl;
     cin >> amount;
@@ -39,8 +40,9 @@ int main() {
 
         totalPoints += credits * points;
         totalCredits += credits;
-
-
-
+        
     }
+    gpa = totalPoints / totalCredits;
+    cout << "Your GPA is: " << gpa << endl;
+    return 0;
 }
