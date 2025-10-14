@@ -10,8 +10,8 @@ int main() {
     double totalPoints = 0.0;
 
     double points = 0.0;
-    int totalCredits = 0;
-    int totalPoints = 0;
+    //int totalCredits = 0;
+    //int totalPoints = 0;
 
 
     cout << "Enter amount of courses: " << endl;
