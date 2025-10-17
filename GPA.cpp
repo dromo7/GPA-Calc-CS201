@@ -21,7 +21,11 @@ int main() {
         cout << "Enter credits received: " << endl;
         cin >> credits;
 
-        
+        // Convert lowercase to uppercase
+        if ((grade >= 'a') && (grade <= 'f')) {
+            grade = toupper(grade);
+        }
+
         if (grade == 'A') {
             points = 4.0;
         } else if (grade == 'B') {
