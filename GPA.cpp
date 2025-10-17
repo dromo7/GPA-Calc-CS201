@@ -22,6 +22,7 @@ int main() {
     
     for (int i=0; i < amount; ++i) {
         char grade;
+        char plus_minus;
         int credits;
         
         //Reads Course Names from User & puts it into vector
@@ -31,6 +32,7 @@ int main() {
 
         cout << "Enter grade received for Course " << i+1 << "(A-F): " << endl;
         cin >> grade;
+        cin.get(plus_minus);
         cout << "Enter credits received: " << endl;
         cin >> credits;
 
@@ -43,6 +45,12 @@ int main() {
         // Validate grade (only A-F allowed)
         if (grade != 'A' && grade != 'B' && grade != 'C' && grade != 'D' && grade != 'F') {
             cout << "Invalid grade entered. Only A-F grades are allowed." << endl;
+            return 0;
+        }
+        
+        // Validate +/- (check for other symbols)
+        if (plus_minus != '\n' && plus_minus != ' ' && plus_minus != '+' && plus_minus != '-'){
+            cout << "Invalid symbol entered. Only +/- or whitespace is allowed." << endl;
             return 0;
         }
 
@@ -58,6 +66,12 @@ int main() {
             points = 1.0;
         } else if (grade == 'F') {
             points = 0.0;
+        }
+
+        if (plus_minus == '+'){
+            points += 0.3;
+        } else if(plus_minus == '-' && grade != 'D' && grade != 'F'){
+            points -= 0.3;
         }
 
         totalPoints += credits * points;
