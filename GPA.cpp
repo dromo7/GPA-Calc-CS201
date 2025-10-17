@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -16,9 +17,17 @@ int main() {
     cout << "Enter amount of courses: " << endl;
     cin >> amount;
 
+    std::vector<string> class_names;
+    string name;
+    
     for (int i=0; i < amount; ++i) {
         char grade;
         int credits;
+        
+        //Reads Course Names from User & puts it into vector
+        cout << "Enter name for Course " << i+1 << ": ";
+        cin >> name;
+        class_names.push_back(name);
 
         cout << "Enter grade received for Course " << i+1 << "(A-F): " << endl;
         cin >> grade;
@@ -62,6 +71,6 @@ int main() {
     } else {
         cout << "No valid courses entered." << endl;
     }
-    
+
     return 0;
 }
