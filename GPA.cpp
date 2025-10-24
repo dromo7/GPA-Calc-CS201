@@ -10,7 +10,7 @@ int main() {
     double totalCredits = 0.0;
     double totalPoints = 0.0;
 
-    double points = 0.0;
+    //double points = 0.0;
     //int totalCredits = 0;
     //int totalPoints = 0;
 
@@ -81,7 +81,7 @@ int main() {
     // Calculate and display GPA
     if (totalCredits > 0) {
         gpa = totalPoints / totalCredits;
-        cout << "Your GPA is: " << gpa << endl;
+        cout << "Your GPA is: " << fixed << setprecision(2) << gpa << endl;
     } else {
         cout << "No valid courses entered." << endl;
     }
