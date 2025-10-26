@@ -33,6 +33,7 @@ int main() {
 
         cout << "Enter grade received for Course " << i+1 << "(A-F): " << endl;
         cin >> grade;
+        grade = toupper(grade);
         cin.get(plus_minus);
         cout << "Enter credits received: " << endl;
         cin >> credits;
