@@ -35,24 +35,25 @@ int main() {
         cin >> grade;
         grade = toupper(grade);
         cin.get(plus_minus);
-        cout << "Enter credits received: " << endl;
-        cin >> credits;
-
-        // Validate credits (cannot be negative)
-        if (credits < 0) {
-            cout << "Invalid credits entered. Credits cannot be negative." << endl;
-            return 0;
-        }
 
         // Validate grade (only A-F allowed)
         if (grade != 'A' && grade != 'B' && grade != 'C' && grade != 'D' && grade != 'F') {
             cout << "Invalid grade entered. Only A-F grades are allowed." << endl;
             return 0;
         }
-        
+
         // Validate +/- (check for other symbols)
         if (plus_minus != '\n' && plus_minus != ' ' && plus_minus != '+' && plus_minus != '-'){
             cout << "Invalid symbol entered. Only +/- or whitespace is allowed." << endl;
+            return 0;
+        }
+
+        cout << "Enter credits received: " << endl;
+        cin >> credits;
+
+        // Validate credits (cannot be negative)
+        if (credits < 0) {
+            cout << "Invalid credits entered. Credits cannot be negative." << endl;
             return 0;
         }
 
