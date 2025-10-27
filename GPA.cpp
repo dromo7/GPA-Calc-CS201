@@ -10,7 +10,7 @@ int main() {
 
     double totalCredits = 0.0;
     double totalPoints = 0.0;
-
+    string tmpStr;
     //double points = 0.0;
     //int totalCredits = 0;
     //int totalPoints = 0;
@@ -28,7 +28,8 @@ int main() {
         
         //Reads Course Names from User & puts it into vector
         cout << "Enter name for Course " << i+1 << ": ";
-        cin >> name;
+        getline(cin,tmpStr);
+        getline(cin, name);
         class_names.push_back(name);
 
         cout << "Enter grade received for Course " << i+1 << "(A-F): " << endl;
