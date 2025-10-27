@@ -36,7 +36,7 @@ int main() {
             getline(cin, name);
             class_names.push_back(name);
 
-            cout << "Enter grade received for Course " << i+1 << "(A-F, +/- are optional): " << endl;
+            cout << "Enter grade received for Course " << i+1 << "(A-F, +/- allowed but optional): " << endl;
             cin >> grade;
             grade = toupper(grade);
             cin.get(plus_minus);
