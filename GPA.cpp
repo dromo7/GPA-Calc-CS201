@@ -6,6 +6,7 @@ using namespace std;
 
 int main() {
     bool programloop = true;
+    cout << "Welcome to the GPA Calculator!" << endl;
     do {
         int amount;
         double gpa;
@@ -18,7 +19,7 @@ int main() {
         //int totalCredits = 0;
         //int totalPoints = 0;
 
-        cout << "Enter amount of courses: " << endl;
+        cout << "Enter amount the number of courses you took: " << endl;
         cin >> amount;
 
         std::vector<string> class_names;
@@ -35,7 +36,7 @@ int main() {
             getline(cin, name);
             class_names.push_back(name);
 
-            cout << "Enter grade received for Course " << i+1 << "(A-F): " << endl;
+            cout << "Enter grade received for Course " << i+1 << "(A-F, +/- are optional): " << endl;
             cin >> grade;
             grade = toupper(grade);
             cin.get(plus_minus);
@@ -52,7 +53,7 @@ int main() {
                 return 0;
             }
 
-            cout << "Enter credits received: " << endl;
+            cout << "Enter credits received (Whole numbers only): " << endl;
             cin >> credits;
 
             // Validate credits (cannot be negative)
@@ -63,15 +64,15 @@ int main() {
 
             double points = 0.0;
         
-            if (grade == 'A') {
+            if (grade == 'A' || 'a') {
                 points = 4.0;
-            } else if (grade == 'B') {
+            } else if (grade == 'B' || 'b') {
                 points = 3.0;
-            } else if (grade == 'C') {
+            } else if (grade == 'C' || 'c') {
                 points = 2.0;
-            } else if (grade == 'D') {
+            } else if (grade == 'D' || 'd') {
                 points = 1.0;
-            } else if (grade == 'F') {
+            } else if (grade == 'F' || 'f') {
                 points = 0.0;
             }
 
