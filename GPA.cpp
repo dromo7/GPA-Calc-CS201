@@ -7,6 +7,7 @@ using namespace std;
 int main() {
     bool programloop = true;
     cout << "Welcome to the GPA Calculator!" << endl;
+    cout << "------------------------------" << endl;
     do {
         int amount;
         double gpa;
