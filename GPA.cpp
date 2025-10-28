@@ -10,7 +10,7 @@ int main() {
     do {
         int amount;
         double gpa;
-        char choice;
+        char choice = ' ';
 
         double totalCredits = 0.0;
         double totalPoints = 0.0;
@@ -64,15 +64,15 @@ int main() {
 
             double points = 0.0;
         
-            if (grade == 'A' || 'a') {
+            if (grade == 'A' || grade == 'a') {
                 points = 4.0;
-            } else if (grade == 'B' || 'b') {
+            } else if (grade == 'B' || grade == 'b') {
                 points = 3.0;
-            } else if (grade == 'C' || 'c') {
+            } else if (grade == 'C' || grade == 'c') {
                 points = 2.0;
-            } else if (grade == 'D' || 'd') {
+            } else if (grade == 'D' || grade == 'd') {
                 points = 1.0;
-            } else if (grade == 'F' || 'f') {
+            } else if (grade == 'F' || grade == 'f') {
                 points = 0.0;
             }
 
@@ -94,12 +94,18 @@ int main() {
             cout << "No valid courses entered." << endl;
         }
         
-        cout << "Would you like to calculate a new GPA? (Enter Y for Yes| N for No)"<< endl;
-        cin >> choice;
-        if (toupper(choice) == 'N'){
-            programloop = false;
+        while (toupper(choice) != 'Y' && toupper(choice) != 'N'){
+            cout << "Would you like to calculate a new GPA? (Enter Y for Yes| N for No)"<< endl;
+            cin >> choice;
+            if (toupper(choice) == 'N'){
+                programloop = false;
+            }
+            else if (toupper(choice) == 'Y')
+            {
+                programloop = true;
+            }
+            else cout << "Not valid option." << endl;
         }
-
     } while (programloop);
     return 0;
 }
