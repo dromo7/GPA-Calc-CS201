@@ -66,7 +66,7 @@ int main() {
         
         // If no courses loaded, ask how many to enter
         if (class_names.empty()) {
-            cout << "Enter amount the number of courses you took: " << endl;
+            cout << "Enter the amount of courses you took: " << endl;
             cin >> amount;
         }
     
@@ -125,7 +125,7 @@ int main() {
             cout << "-----------------------\n" << endl;
             
             cout << "What would you like to do?" << endl;
-            cout << "1. Calculate GPA" << endl;
+            cout << "1. Calculate GPA (Final Step)" << endl;
             cout << "2. Add a course" << endl;
             cout << "3. Edit a course" << endl;
             cout << "4. Remove a course" << endl;
