@@ -47,7 +47,10 @@ int main() {
                     int credits;
                     
                     getline(inFile, courseName);
-                    inFile >> grade >> plus_minus >> credits;
+                    inFile >> grade;
+                    inFile.ignore();
+                    inFile.get(plus_minus);
+                    inFile >> credits;
                     inFile.ignore();
                     
                     class_names.push_back(courseName);
